@@ -27,8 +27,8 @@ const Hero = () => {
                 </button>
             </div>
 
-            <div className="flex items-center w-full pl-20 relative">
-                <div className="w-[480px] p-14 bg-dark backdrop-blur-md flex-shrink-0 z-20 mt-10">
+            <div className="flex items-center w-full relative">
+                <div className="w-[30rem] mb-20 ml-20 p-14 bg-black/80 backdrop-blur-md flex-shrink-0 z-20 absolute">
                     <h1 className="text-5xl font-bold text-white leading-tight mb-6">
                         Title
                     </h1>
@@ -44,48 +44,36 @@ const Hero = () => {
 
                 </div>
 
-                {/* Container do Carrossel - Resolvendo o problema de empilhamento e tamanho */}
-                <div className="flex gap-6 ml-[-40px] flex-nowrap items-end overflow-visible">
-                    {/* Imagem Principal - Redimensionada para não "estourar" o layout */}
-                    <div className="relative flex-shrink-0 w-[800px] h-[400px] shadow-2xl">
-                        <Image
-                            src="/strangerThingsLogo2.jpg"
-                            alt="Hero 1"
-                            fill
-                            sizes="800px"
-                            className="object-cover rounded-sm"
-                            priority
-                        />
-                        {/* Tag flutuante Bohauss */}
-                        <div
-                            className="absolute bottom-6 right-6 bg-[#0F0F0F]/90 p-5 min-w-[240px] border border-[#1F1F1F]">
-                            <h3 className="font-bold text-white text-lg uppercase tracking-tight">Bohauss</h3>
-                            <p className="text-xs text-gray-500 mb-2 font-mono">Luxury big sofa 2-seat</p>
-                            <div className="flex justify-between items-center mt-3 border-t border-[#1F1F1F] pt-3">
-                                <span className="font-bold text-white">Rp 17.000.000</span>
-                                <ChevronRight size={18} className="text-white"/>
-                            </div>
-                        </div>
-                    </div>
+                <div className="flex gap-20 flex-nowrap items-end ">
 
-                    {/* Imagem 2 - Secundária */}
                     <div
-                        className="relative flex-shrink-0 w-[500px] h-[320px] opacity-60 grayscale hover:grayscale-0 transition-all">
+                        className="relative flex-shrink-0 w-[50%] -ml-110 opacity-60 grayscale hover:grayscale-0 transition-all">
                         <Image
                             src="/wandinhaLogo2.jpg"
-                            alt="Hero 2"
-                            fill
-                            sizes="500px"
+                            alt="Previous movie logo"
+                            width={1220}
+                            height={610}
                             className="object-cover rounded-sm"
                         />
                     </div>
 
-                    {/* Imagem 3 */}
-                    <div className="relative flex-shrink-0 w-[500px] h-[320px] opacity-30">
+                    <div className="relative flex-shrink-0 w-[60%] ml-30 mt-30 shadow-2xl">
+                        <Image
+                            src="/residenciaHillLogo2.jpg"
+                            alt="Main movie logo"
+                            className="object-cover rounded-sm"
+                            priority
+                            width={1220}
+                            height={610}
+                        />
+                    </div>
+
+                    <div className="relative flex-shrink-0 w-[50%] opacity-30">
                         <Image
                             src="/sherlockHolmesLogo2.jpg"
-                            alt="Hero 3"
-                            fill
+                            alt="Next movie logo"
+                            width={1220}
+                            height={610}
                             sizes="500px"
                             className="object-cover rounded-sm"
                         />
