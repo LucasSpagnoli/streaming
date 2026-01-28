@@ -13,6 +13,13 @@ body {
 
 .bg-dark {
     background-color: var(--black);
+}
+
+.bg-hill {
+    background-color: #0D2B33;
+}
+
+.bg-border {
     border-radius: 5px;
 }
 
@@ -28,16 +35,25 @@ body {
     border-radius: 3px;
 }
 
-.divBgRed {
-    position: absolute;
+.divBgLeft {
     z-index: -10;
     top: 0;
     left: 0;
 }
 
-.divBgBlack {
-    position: absolute;
+.divBgRight {
     z-index: -10;
     top: 0;
     right: 0;
+}
+
+.heroText {
+    margin: 7rem 0 0 5rem;
+    z-index: -8;
+}
+
+.heroImage {
+    width: 60%;
+    z-index: -9;
+    margin: 11rem 0 0 28rem;
 }
