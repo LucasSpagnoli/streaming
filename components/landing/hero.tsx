@@ -10,44 +10,38 @@ const Hero = () => {
             </div>
 
             {/*// TODO: Mudar cores e posição*/}
-            <div className="absolute top-10 left-[60%] -translate-x-1/2 flex gap-2 z-30">
-                <span className="w-2.5 h-2.5 rounded-full bg-[#E8A37E]"/>
+            <div className="absolute top-20 left-[50%] -translate-x-1/2 flex gap-2 z-30">
+                <span className="w-2.5 h-2.5 rounded-full bg-dark"/>
                 <span className="w-2 h-2 rounded-full bg-[#1F1F1F] mt-[1px]"/>
                 <span className="w-2 h-2 rounded-full bg-[#1F1F1F] mt-[1px]"/>
             </div>
 
 
-            {/*// TODO: Mudar cores*/}
-            <div className="absolute top-8 right-12 flex gap-4 z-30">
-                <button className="p-2 rounded-full bg-[#1F1F1F] text-white hover:bg-gray-700 transition">
+            <div className="absolute top-23 right-20 flex gap-4 z-30">
+                <button className="bg-dark text-white hover:text-gray-600 hover:scale-90 transition">
                     <ChevronLeft size={20}/>
                 </button>
-                <button className="p-2 rounded-full bg-[#E8A37E] text-white hover:scale-105 transition shadow-lg">
+                <button className="bg-dark text-white transition hover:text-gray-600 hover:scale-90 shadow-lg">
                     <ChevronRight size={20}/>
                 </button>
             </div>
 
             <div className="flex items-center w-full relative">
-                <div className="w-[30rem] mb-20 ml-20 p-14 bg-black/80 backdrop-blur-md flex-shrink-0 z-20 absolute">
-                    <h1 className="text-5xl font-bold text-white leading-tight mb-6">
+                <div className="w-[35%] ml-15 p-10 h-[27rem] mt-10 flex flex-col justify-between bg-black/80 backdrop-blur-md flex-shrink-0 z-20 absolute">
+                    <h1 className="text-5xl font-bold text-white leading-tight">
                         Title
                     </h1>
-                    <p className="text-gray-400 text-lg mb-10">
+                    <p className="text-gray-400 text-lg">
                         Description
                     </p>
 
                     {/*//TODO: Alterar design*/}
-                    <button
-                        className="w-full py-4 bg-hill text-white font-bold rounded-[3px] hover:brightness-110 transition">
+                    <button className="w-[70%] self-center py-4 bg-hill text-white font-bold rounded-[3px]">
                         Watch Now
                     </button>
-
                 </div>
-
-                <div className="flex gap-20 flex-nowrap items-end ">
-
-                    <div
-                        className="relative flex-shrink-0 w-[50%] -ml-110 opacity-60 grayscale hover:grayscale-0 transition-all">
+                <div className="flex gap-15 flex-nowrap items-end">
+                    <div className="relative flex-shrink-0 w-[50%] -ml-100 opacity-60 grayscale hover:grayscale-0 transition-all">
                         <Image
                             src="/wandinhaLogo2.jpg"
                             alt="Previous movie logo"
@@ -57,7 +51,7 @@ const Hero = () => {
                         />
                     </div>
 
-                    <div className="relative flex-shrink-0 w-[60%] ml-30 mt-30 shadow-2xl">
+                    <div className="relative flex-shrink-0 w-[60%] mx-10 mt-30 shadow-2xl">
                         <Image
                             src="/residenciaHillLogo2.jpg"
                             alt="Main movie logo"
