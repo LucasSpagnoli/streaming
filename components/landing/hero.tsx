@@ -9,11 +9,11 @@ const Hero = () => {
                 <div className="w-2/5 h-full bg-dark"/>
             </div>
 
-            {/*// TODO: Mudar cores e posição*/}
+            {/*// TODO: Mudar cores*/}
             <div className="absolute top-20 left-[50%] -translate-x-1/2 flex gap-2 z-30">
                 <span className="w-2.5 h-2.5 rounded-full bg-dark"/>
-                <span className="w-2 h-2 rounded-full bg-[#1F1F1F] mt-[1px]"/>
-                <span className="w-2 h-2 rounded-full bg-[#1F1F1F] mt-[1px]"/>
+                <span className="w-2 h-2 rounded-full bg-dark mt-px"/>
+                <span className="w-2 h-2 rounded-full bg-dark mt-px"/>
             </div>
 
 
@@ -27,7 +27,7 @@ const Hero = () => {
             </div>
 
             <div className="flex items-center w-full relative">
-                <div className="w-[35%] ml-15 p-10 h-[27rem] mt-10 flex flex-col justify-between bg-black/80 backdrop-blur-md flex-shrink-0 z-20 absolute">
+                <div className="w-[30%] ml-15 p-10 h-108 mt-10 flex flex-col justify-start bg-black/80 backdrop-blur-md shrink-0 z-20 absolute">
                     <h1 className="text-5xl font-bold text-white leading-tight">
                         Title
                     </h1>
@@ -35,13 +35,13 @@ const Hero = () => {
                         Description
                     </p>
 
-                    {/*//TODO: Alterar design*/}
-                    <button className="w-[70%] self-center py-4 bg-hill text-white font-bold rounded-[3px]">
+                    {/*//TODO: Alterar design e atribuir função*/}
+                    <button className="w-[70%] self-center py-4 bg-hill text-white font-bold rounded-[3px] mt-auto">
                         Watch Now
                     </button>
                 </div>
                 <div className="flex gap-15 flex-nowrap items-end">
-                    <div className="relative flex-shrink-0 w-[50%] -ml-100 opacity-60 grayscale hover:grayscale-0 transition-all">
+                    <div className="relative shrink-0 w-[50%] -ml-100 opacity-60 grayscale hover:grayscale-0 transition-all">
                         <Image
                             src="/wandinhaLogo2.jpg"
                             alt="Previous movie logo"
@@ -51,7 +51,7 @@ const Hero = () => {
                         />
                     </div>
 
-                    <div className="relative flex-shrink-0 w-[60%] mx-10 mt-30 shadow-2xl">
+                    <div className="relative shrink-0 w-[60%] mx-10 mt-30 shadow-2xl">
                         <Image
                             src="/residenciaHillLogo2.jpg"
                             alt="Main movie logo"
@@ -62,7 +62,7 @@ const Hero = () => {
                         />
                     </div>
 
-                    <div className="relative flex-shrink-0 w-[50%] opacity-30">
+                    <div className="relative shrink-0 w-[50%] opacity-30">
                         <Image
                             src="/sherlockHolmesLogo2.jpg"
                             alt="Next movie logo"

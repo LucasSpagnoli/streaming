@@ -1,0 +1,35 @@
+'use client'
+import QuestionCard from "@/components/landing/components/faq/questionCard";
+import {faqArray} from './faqs'
+
+const FaqFeature = () => {
+    const left = faqArray.filter((_, i) => i % 2 === 0)
+    const right = faqArray.filter((_, i) => i % 2 !== 0)
+    return (
+        <article className={"w-full"}>
+            <h2 className={"text-2xl m-15 font-bold text-white leading-tight"}>Frequently Asked Questions</h2>
+            <div className={"flex gap-6 w-[80%] mx-auto"}>
+                <ul className="flex-1 flex flex-col gap-4">
+                    {left.map((faq, index) => (
+                        <QuestionCard
+                            key={index}
+                            question={faq.question}
+                            answer={faq.answer}
+                        />
+                    ))}
+                </ul>
+                <ul className="flex-1 flex flex-col gap-4">
+                    {right.map((faq, index) => (
+                        <QuestionCard
+                            key={index}
+                            question={faq.question}
+                            answer={faq.answer}
+                        />
+                    ))}
+                </ul>
+            </div>
+        </article>
+    )
+}
+
+export default FaqFeature;

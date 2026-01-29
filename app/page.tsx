@@ -1,8 +1,12 @@
 import Image from "next/image";
 import Hero from "@/components/landing/hero";
+import Features from "@/components/landing/features";
 
 export default function Home() {
     return (
-        <Hero />
+        <main>
+            <Hero/>
+            <Features/>
+        </main>
     );
 }

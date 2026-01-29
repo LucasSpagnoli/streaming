@@ -2,32 +2,30 @@
 
 :root {
     --black: #0F0F0F;
-    --gray: #1F1F1F;
+    --gray: #1A1A1A;
+    --light-gray: #333333;
 }
 
 body {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: Manrope, Arial, sans-serif;
 }
 
 .bg-dark {
     background-color: var(--black);
 }
 
+.border-darkGray {
+    border: 2px solid var(--gray);
+    border-radius: 4px;
+}
+
 .bg-hill {
     background-color: #0D2B33;
 }
 
-.bg-border {
-    border-radius: 5px;
-}
-
-.border-darkGray {
-    border-color: var(--gray);
-    border-style: solid;
-    border-width: 2.5px;
-}
 
 .link-hover:hover {
     background-color: var(--gray);
@@ -35,25 +33,11 @@ body {
     border-radius: 3px;
 }
 
-.divBgLeft {
-    z-index: -10;
-    top: 0;
-    left: 0;
+.bg-customGray {
+    background-color: var(--gray);
 }
 
-.divBgRight {
-    z-index: -10;
-    top: 0;
-    right: 0;
-}
-
-.heroText {
-    margin: 7rem 0 0 5rem;
-    z-index: -8;
-}
-
-.heroImage {
-    width: 60%;
-    z-index: -9;
-    margin: 11rem 0 0 28rem;
+.border-lightGray {
+    border-radius: 10px;
+    border: 1px solid var(--light-gray);
 }
