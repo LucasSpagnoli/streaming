@@ -6,7 +6,7 @@ import CTAButton from "@/components/landing/components/ctaButton";
 const Features = () => {
     // TODO: Fazer versão pra celular (responsividade)
     return (
-        <section className={"bg-dark"}>
+        <section>
             {/*CTA*/}
             <article className={"flex flex-col items-center justify-center"}>
                 <h2 className={"text-4xl mt-15 font-bold text-white leading-tight"}>Your Favorite Streaming
@@ -70,7 +70,7 @@ const Features = () => {
 
             {/*Free trial CTA*/}
             <article className={"flex flex-col items-center w-full mt-20"}>
-                <div className={"w-[70%] h-48 -bg-linear-300 from-red-700 to-black rounded-xl flex items-center justify-around border-darkGray"}>
+                <div className={"w-[70%] h-48 -bg-linear-300 from-red-700 to-black flex items-center justify-around border-darkGray"}>
                     <h1 className={"text-4xl font-bold text-white leading-tight"}>
                         Start your free trial today!
                     </h1>

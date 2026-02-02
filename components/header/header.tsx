@@ -1,7 +1,7 @@
 import Image from "next/image";
 import {CircleUser} from 'lucide-react'
 import Link from "next/dist/client/link";
-import NavLink from "@/components/navLink";
+import NavLink from "@/components/header/navLink";
 
 const Header = () => {
     return (
