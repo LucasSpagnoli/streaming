@@ -1,7 +1,5 @@
-import {Play} from "lucide-react";
 import OpinionCard from "@/components/landing/components/opinionCard";
 import FaqFeature from "@/components/landing/components/faq/faqFeature";
-import NavLink from "@/components/navLink";
 import PlanCard from "@/components/landing/components/planCard";
 import CTAButton from "@/components/landing/components/ctaButton";
 
@@ -13,7 +11,7 @@ const Features = () => {
             <article className={"flex flex-col items-center justify-center"}>
                 <h2 className={"text-4xl mt-15 font-bold text-white leading-tight"}>Your Favorite Streaming
                     Experience</h2>
-                <p className={"text-gray-400 w-240 mt-5 text-md text-center"}>Favorite is the best streaming
+                <p className={"text-gray-400 w-240 my-5 text-md text-center"}>Favorite is the best streaming
                     experience
                     for watching your favorite movies and shows on demand, anytime, anywhere. With Favorite, you can
                     enjoy a
@@ -38,7 +36,7 @@ const Features = () => {
             {/*FAQ*/}
             <FaqFeature/>
 
-            {/**/}
+            {/*Buy plans*/}
             <article className={"flex flex-col"}>
                 <h2 className={"text-2xl m-15 font-bold text-white leading-tight"}>
                     Choose the best plan for you
@@ -58,12 +56,28 @@ const Features = () => {
                 </section>
 
                 <div className={"flex justify-center mt-10 gap-20"}>
-                    <PlanCard plan={"Basic Plan"} text={"Enjoy an extensive library of movies and shows, featuring a range of content, including recently released titles."} price={9.99} monthly={true}/>
-                    <PlanCard plan={"Standard Plan"} text={"Access to a wider selection of movies and shows, including most new releases and exclusive content."} price={12.99} monthly={true}/>
-                    <PlanCard plan={"Premium Plan"} text={"Access to a widest selection of movies and shows, including all new releases and Offline Viewing"} price={14.99} monthly={true}/>
+                    <PlanCard plan={"Basic Plan"}
+                              text={"Enjoy an extensive library of movies and shows, featuring a range of content, including recently released titles."}
+                              price={9.99} monthly={true}/>
+                    <PlanCard plan={"Standard Plan"}
+                              text={"Access to a wider selection of movies and shows, including most new releases and exclusive content."}
+                              price={12.99} monthly={true}/>
+                    <PlanCard plan={"Premium Plan"}
+                              text={"Access to a widest selection of movies and shows, including all new releases and Offline Viewing"}
+                              price={14.99} monthly={true}/>
                 </div>
             </article>
 
+            {/*Free trial CTA*/}
+            <article className={"flex flex-col items-center w-full mt-20"}>
+                <div className={"w-[70%] h-48 -bg-linear-300 from-red-700 to-black rounded-xl flex items-center justify-around border-darkGray"}>
+                    <h1 className={"text-4xl font-bold text-white leading-tight"}>
+                        Start your free trial today!
+                    </h1>
+                    <CTAButton play={true} text={"Start a free trial"}/>
+                </div>
+
+            </article>
         </section>
     )
 }
