@@ -3,6 +3,7 @@ import {ChevronLeft, ChevronRight} from "lucide-react";
 
 const Hero = () => {
     return (
+        // TODO: Precisa fazer todo o design com a api do TMDB
         <section className="relative w-full min-h-screen flex items-center overflow-hidden">
             <div className="absolute inset-0 flex -z-10">
                 <div className="w-3/5 h-full bg-hill"/>

@@ -29,8 +29,13 @@ body {
 
 .link-hover:hover {
     background-color: var(--gray);
-    transition: all 0.2s ease;
+    transition: all 0.2s ease-in-out;
     border-radius: 3px;
+}
+
+.link-hover {
+    background-color: var(--black);
+    transition: all 0.2s ease-in-out;
 }
 
 .bg-customGray {
