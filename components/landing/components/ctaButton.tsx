@@ -1,4 +1,5 @@
 import {Play} from "lucide-react";
+import Link from "next/dist/client/link";
 
 type CTAButtonProps = {
     play: boolean;
@@ -7,10 +8,10 @@ type CTAButtonProps = {
 
 const CTAButton = ({play, text}: CTAButtonProps) => {
     return (
-        <button className={"bg-red-600 rounded text-white w-52 flex p-2 justify-center self-center"}>
+        <Link className={"bg-red-600 rounded text-white md:w-52 max-w-xs flex md:p-2 p-4 justify-center self-center mt-5"} href={"/login"}>
             {play && <Play fill={"white"} width={15}/>}
             <p className={"indent-1.5"}>{text}</p>
-        </button>
+        </Link>
     )
 }
 

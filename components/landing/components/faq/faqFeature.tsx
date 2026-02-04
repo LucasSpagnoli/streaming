@@ -8,8 +8,8 @@ const FaqFeature = () => {
     return (
         <article className={"w-full"}>
             <h2 className={"text-2xl m-15 font-bold text-white leading-tight"}>Frequently Asked Questions</h2>
-            <div className={"flex gap-6 w-[80%] mx-auto"}>
-                <ul className="flex-1 flex flex-col gap-4">
+            <div className={"flex gap-6 md:w-[80%] w-[50%] mx-auto"}>
+                <ul className="flex flex-col h-100">
                     {left.map((faq, index) => (
                         <QuestionCard
                             key={index}
@@ -18,7 +18,7 @@ const FaqFeature = () => {
                         />
                     ))}
                 </ul>
-                <ul className="flex-1 flex flex-col gap-4">
+                <ul className="flex flex-col h-100">
                     {right.map((faq, index) => (
                         <QuestionCard
                             key={index}

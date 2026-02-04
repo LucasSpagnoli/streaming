@@ -1,6 +1,5 @@
 import FooterLink from "@/components/Footer/footerLink";
 import {Facebook, Linkedin, Twitter} from "lucide-react";
-import {white} from "next/dist/lib/picocolors";
 import FooterTitle from "@/components/Footer/footerTitle";
 
 const Footer = () => {

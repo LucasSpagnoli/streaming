@@ -22,11 +22,11 @@ export default function RootLayout({
     return (
         <html lang="en">
         <body
-            className={`${manrope.variable} antialiased`}
+            className={`${manrope.variable} antialiased min-h-screen flex flex-col`}
         >
-        <Header />
-        {children}
-        <Footer />
+        {/*<Header />*/}
+        <main className={"grow"}>{children}</main>
+        {/*<Footer />*/}
         </body>
         </html>
     );

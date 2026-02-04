@@ -1,4 +1,5 @@
 import {JSX} from "react";
+import Link from "next/dist/client/link";
 
 type FooterLinkProps = {
     text: string;
@@ -6,7 +7,7 @@ type FooterLinkProps = {
 
 const FooterLink = ({text}: FooterLinkProps): JSX.Element => {
     return (
-        <li className={"text-gray-400 text-md"}>{text}</li>
+        <li className={"text-gray-400 text-md"}><Link href={"/"}>{text}</Link></li>
     )
 }
 
