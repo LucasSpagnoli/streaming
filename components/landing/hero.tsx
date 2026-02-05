@@ -1,7 +1,12 @@
 import Image from "next/image";
 import {ChevronLeft, ChevronRight} from "lucide-react";
+import getHeroMovie from "@/lib/tmdb";
 
-const Hero = () => {
+const Hero = async () => {
+    const movie1 = await getHeroMovie({id: 72844})
+    const movie2 = await getHeroMovie({id: 119051})
+    const movie3 = await getHeroMovie({id: 66732})
+
     return (
         // TODO: Precisa fazer todo o design com a api do TMDB
         <section className="relative w-full min-h-screen flex items-center overflow-hidden">
@@ -28,7 +33,8 @@ const Hero = () => {
             </div>
 
             <div className="flex items-center w-full relative">
-                <div className="w-[30%] ml-15 p-10 h-108 mt-10 flex flex-col justify-start bg-black/80 backdrop-blur-md shrink-0 z-20 absolute">
+                <div
+                    className="w-[30%] ml-15 p-10 h-108 mt-10 flex flex-col justify-start bg-black/80 backdrop-blur-md shrink-0 z-20 absolute">
                     <h1 className="text-5xl font-bold text-white leading-tight">
                         Title
                     </h1>
@@ -42,9 +48,10 @@ const Hero = () => {
                     </button>
                 </div>
                 <div className="flex gap-15 flex-nowrap items-end">
-                    <div className="relative shrink-0 w-[50%] -ml-100 opacity-60 grayscale hover:grayscale-0 transition-all">
+                    <div
+                        className="relative shrink-0 w-[50%] -ml-100 opacity-60 grayscale hover:grayscale-0 transition-all">
                         <Image
-                            src="/wandinhaLogo2.jpg"
+                            src={`https://image.tmdb.org/t/p/original${movie2.image[0].file_path}`}
                             alt="Previous movie logo"
                             width={1220}
                             height={610}
@@ -54,7 +61,7 @@ const Hero = () => {
 
                     <div className="relative shrink-0 w-[60%] mx-10 mt-30 shadow-2xl">
                         <Image
-                            src="/residenciaHillLogo2.jpg"
+                            src={`https://image.tmdb.org/t/p/original${movie1.image[2].file_path}`}
                             alt="Main movie logo"
                             className="object-cover rounded-sm"
                             priority
@@ -65,7 +72,7 @@ const Hero = () => {
 
                     <div className="relative shrink-0 w-[50%] opacity-30">
                         <Image
-                            src="/sherlockHolmesLogo2.jpg"
+                            src={`https://image.tmdb.org/t/p/original${movie3.image[1].file_path}`}
                             alt="Next movie logo"
                             width={1220}
                             height={610}
