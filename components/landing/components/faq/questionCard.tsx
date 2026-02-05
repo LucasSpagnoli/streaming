@@ -14,10 +14,10 @@ const QuestionCard = ({question, answer}: questionCardProps) => {
     return (
 
         <li className="border-b border-gray-700">
-            <button className="w-full md:py-4 py-1 text-left flex justify-between items-center text-white sm:font-medium text-sm"
+            <button className="cursor-pointer w-full md:py-4 py-1 text-left flex justify-between items-center text-white sm:font-medium text-sm lg:text-[1.1rem]"
                     onClick={() => setIsOpen(!isOpen)}>
                 <span>{question}</span>
-                <motion.span animate={{rotate: isOpen ? 405 : 0}} transition={{duration: 0.6, ease: "easeInOut"}} className="text-red-600 ml-4">
+                <motion.span animate={{rotate: isOpen ? 215 : 0}} transition={{duration: 0.6, ease: "easeInOut"}} className="text-red-600 ml-4">
                     +
                 </motion.span>
             </button>

@@ -9,11 +9,11 @@ const Features = () => {
         <section className={"w-full overflow-hidden"}>
             {/*CTA*/}
             <article className="flex flex-col items-center justify-center w-full px-6 text-center">
-                <h2 className="lg:text-4xl text-2xl mt-15 font-bold text-white leading-tight max-w-md">
+                <h2 className="lg:text-4xl text-2xl mt-15 mb-5 font-bold text-white leading-tight max-w-md">
                     Your Favorite Streaming Experience
                 </h2>
 
-                <p className="text-gray-400 my-5 text-sm md:text-md max-w-xs md:max-w-md lg:max-w-4xl">
+                <p className="text-gray-400 mb-10 text-sm md:text-md max-w-xs md:max-w-md lg:max-w-2xl">
                     Favorite is the best streaming experience for watching your favorite movies and shows on demand,
                     anytime, anywhere. With Favorite, you can enjoy a wide variety of content, including the latest
                     blockbusters, classic movies, popular TV shows, and more. You can also create your own watchlist, so
@@ -62,7 +62,7 @@ const Features = () => {
                     </div>
                 </section>
 
-                <div className={"flex justify-center mt-10 lg:gap-20 gap-10 sm:flex-row flex-col mx-auto sm:mx-0"}>
+                <div className={"flex justify-center mt-10 gap-10 sm:flex-row flex-col mx-auto sm:mx-0"}>
                     <PlanCard plan={"Basic Plan"}
                               text={"Enjoy an extensive library of movies and shows, featuring a range of content, including recently released titles."}
                               price={9.99} monthly={true}/>
@@ -77,9 +77,8 @@ const Features = () => {
 
             {/*Free trial CTA*/}
             <article className={"flex flex-col items-center w-full mt-20"}>
-                <div
-                    className={"w-[70%] h-48 -bg-linear-300 from-red-700 to-black flex flex-col lg:flex-row items-center justify-around border-darkGray"}>
-                    <h1 className={"sm:text-4xl text-2xl text-center font-bold text-white leading-tight sm:-mb-15 lg:mb-0"}>
+                <div className={"lg:w-[90%] w-[70%] lg:h-40 h-48 -bg-linear-300 from-red-700 to-black flex flex-col lg:flex-row items-center justify-around border-darkGray"}>
+                    <h1 className={"sm:text-4xl text-2xl text-center font-bold text-white leading-tight sm:-mb-15 lg:-mb-0"}>
                         Start your free trial today!
                     </h1>
                     <CTAButton play={true} text={"Start a free trial"}/>
