@@ -7,9 +7,9 @@ const FaqFeature = () => {
     const right = faqArray.filter((_, i) => i % 2 !== 0)
     return (
         <article className={"w-full"}>
-            <h2 className={"text-2xl m-15 font-bold text-white leading-tight"}>Frequently Asked Questions</h2>
-            <div className={"flex gap-6 md:w-[80%] w-[50%] mx-auto"}>
-                <ul className="flex flex-col h-100">
+            <h2 className={"sm:text-2xl text-xl sm:m-15 font-bold m-5 text-white leading-tight"}>Frequently Asked Questions</h2>
+            <div className={"flex gap-6 md:w-[80%] w-[90%] mx-auto mb-10"}>
+                <ul className="flex flex-col">
                     {left.map((faq, index) => (
                         <QuestionCard
                             key={index}
@@ -18,7 +18,7 @@ const FaqFeature = () => {
                         />
                     ))}
                 </ul>
-                <ul className="flex flex-col h-100">
+                <ul className="flex flex-col">
                     {right.map((faq, index) => (
                         <QuestionCard
                             key={index}

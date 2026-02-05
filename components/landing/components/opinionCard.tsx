@@ -8,9 +8,9 @@ type OpinionCardProps = {
 
 const OpinionCard = ({name, text}: OpinionCardProps): JSX.Element => {
     return (
-        <div className={"lg:w-68 w-50 h-80 border-lightGray bg-customGray py-3 mx-5 shadow-xl"}>
-            <h3 className={"text-[1.1rem] mt-5 font-bold text-white leading-tight flex items-center gap-2 ml-4 lg:ml-0"}><CircleUser/>{name}</h3>
-            <p className={"text-gray-400 mt-5 text-[0.8rem] text-center italic"}>{text}</p>
+        <div className={"lg:w-68 sm:w-50 sm:h-80 h-40 w-30 sm:mx-5 mx-2 border-lightGray bg-customGray py-3 self-center shadow-xl"}>
+            <h3 className={"sm:text-[1.1rem] text-[0.7rem] sm:mt-5 mt-2 font-bold text-white leading-tight flex items-center gap-2 sm:ml-4 ml-2 lg:ml-0"}><CircleUser className={"hidden sm:block"}/>{name}</h3>
+            <p className={"text-gray-400 sm:mt-5 mt-1 sm:text-[0.8rem] text-[0.6rem] text-center italic"}>{text}</p>
         </div>
     )
 }

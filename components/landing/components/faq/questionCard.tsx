@@ -14,7 +14,7 @@ const QuestionCard = ({question, answer}: questionCardProps) => {
     return (
 
         <li className="border-b border-gray-700">
-            <button className="w-full md:py-4 py-1 text-left flex justify-between items-center text-white font-medium"
+            <button className="w-full md:py-4 py-1 text-left flex justify-between items-center text-white sm:font-medium text-sm"
                     onClick={() => setIsOpen(!isOpen)}>
                 <span>{question}</span>
                 <motion.span animate={{rotate: isOpen ? 405 : 0}} transition={{duration: 0.6, ease: "easeInOut"}} className="text-red-600 ml-4">
@@ -23,8 +23,8 @@ const QuestionCard = ({question, answer}: questionCardProps) => {
             </button>
             <AnimatePresence>
                 {isOpen &&
-                    (<motion.div initial={{height: 0, opacity: 0}} animate={{height: "auto", opacity: 1}}
-                                 exit={{height: 0, opacity: 0}}
+                    (<motion.div initial={{height: 0, opacity: 0, width: "90%"}} animate={{height: "auto", opacity: 1, width: "90%"}}
+                                 exit={{height: 0, opacity: 0, width: "90%"}}
                                  transition={{duration: 0.3, ease: "easeInOut"}}
                                  className={"overflow-hidden"}>
                         <p className="pb-4 text-gray-400 text-sm leading-relaxed">

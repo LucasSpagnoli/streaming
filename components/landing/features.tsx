@@ -25,8 +25,9 @@ const Features = () => {
 
             {/*Opinions*/}
             <article>
-                <h2 className={"text-2xl md:m-10 my-10 mx-2 font-bold text-white leading-tight"}>What they say about us</h2>
-                <div className={"flex justify-center sm:flex-row flex-col"}>
+                <h2 className={"sm:text-2xl text-xl md:m-10 my-10 mx-2 font-bold text-white leading-tight"}>What they say about
+                    us</h2>
+                <div className={"flex justify-center flex-row"}>
                     <OpinionCard name={"LeBron James"} text={"Yoooo"}/>
                     <OpinionCard name={"LeBron James"} text={"Yoooo"}/>
                     <OpinionCard name={"LeBron James"} text={"Yoooo"}/>
@@ -38,24 +39,30 @@ const Features = () => {
 
             {/*Buy plans*/}
             <article className={"flex flex-col"}>
-                <h2 className={"text-2xl m-15 font-bold text-white leading-tight"}>
+                <h2 className={"sm:text-2xl text-xl lg:m-10 sm:m-5 m-4 font-bold text-white leading-tight"}>
                     Choose the best plan for you
                 </h2>
 
-                <section className={"flex"}>
-                    <p className={"text-gray-400 text-md ml-15 -mt-10"}>Join Favorite and select from our flexible
+                <section className={"flex justify-center"}>
+                    <p className={"text-gray-400 text-md lg:ml-15 ml-8 mt-10 sm:mt-0 hidden sm:block"}>
+                        Join Favorite and select from our flexible
                         subscription options tailored to suit your viewing preferences. Get ready for non-stop
-                        entertainment!</p>
-                    {/*TODO: fazer clickable e pôr função de mudar os planos*/}
-                    <div className={"bg-dark border-darkGray -mt-13 ml-8"}>
+                        entertainment!
+                    </p>
+                    {/*TODO: pôr função de mudar os planos*/}
+                    <div className={"bg-dark border-darkGray sm:mr-4 sm:ml-8 mt-2 sm:mt-0 h-12"}>
                         <ul className={"flex p-1.5"}>
-                            <li className={`block list-none text-white text-sm px-4 py-1.5 link-hover`}>Monthly</li>
-                            <li className={`block list-none text-white text-sm px-4 py-1.5 link-hover`}>Yearly</li>
+                            <li className={`block list-none text-white text-sm px-4 py-1.5 link-hover`}>
+                                <button className={"link-hover"}>Monthly</button>
+                            </li>
+                            <li className={`block list-none text-white text-sm px-4 py-1.5 link-hover`}>
+                                <button className={"link-hover"}>Yearly</button>
+                            </li>
                         </ul>
                     </div>
                 </section>
 
-                <div className={"flex justify-center mt-10 gap-20"}>
+                <div className={"flex justify-center mt-10 lg:gap-20 gap-10 sm:flex-row flex-col mx-auto sm:mx-0"}>
                     <PlanCard plan={"Basic Plan"}
                               text={"Enjoy an extensive library of movies and shows, featuring a range of content, including recently released titles."}
                               price={9.99} monthly={true}/>
@@ -71,8 +78,8 @@ const Features = () => {
             {/*Free trial CTA*/}
             <article className={"flex flex-col items-center w-full mt-20"}>
                 <div
-                    className={"w-[70%] h-48 -bg-linear-300 from-red-700 to-black flex items-center justify-around border-darkGray"}>
-                    <h1 className={"text-4xl font-bold text-white leading-tight"}>
+                    className={"w-[70%] h-48 -bg-linear-300 from-red-700 to-black flex flex-col sm:flex-row items-center justify-around border-darkGray"}>
+                    <h1 className={"sm:text-4xl text-2xl text-center font-bold text-white leading-tight"}>
                         Start your free trial today!
                     </h1>
                     <CTAButton play={true} text={"Start a free trial"}/>
@@ -80,7 +87,7 @@ const Features = () => {
 
             </article>
         </section>
-    )
+)
 }
 
 export default Features

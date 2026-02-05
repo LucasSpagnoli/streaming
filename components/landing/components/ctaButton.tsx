@@ -8,7 +8,7 @@ type CTAButtonProps = {
 
 const CTAButton = ({play, text}: CTAButtonProps) => {
     return (
-        <Link className={"bg-red-600 rounded text-white md:w-52 max-w-xs flex md:p-2 p-4 justify-center self-center mt-5"} href={"/login"}>
+        <Link className={"bg-red-600 rounded text-white lg:w-52 max-w-xs flex md:p-2 p-4 justify-center self-center mt-5"} href={"/login"}>
             {play && <Play fill={"white"} width={15}/>}
             <p className={"indent-1.5"}>{text}</p>
         </Link>
