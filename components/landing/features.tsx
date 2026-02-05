@@ -78,8 +78,8 @@ const Features = () => {
             {/*Free trial CTA*/}
             <article className={"flex flex-col items-center w-full mt-20"}>
                 <div
-                    className={"w-[70%] h-48 -bg-linear-300 from-red-700 to-black flex flex-col sm:flex-row items-center justify-around border-darkGray"}>
-                    <h1 className={"sm:text-4xl text-2xl text-center font-bold text-white leading-tight"}>
+                    className={"w-[70%] h-48 -bg-linear-300 from-red-700 to-black flex flex-col lg:flex-row items-center justify-around border-darkGray"}>
+                    <h1 className={"sm:text-4xl text-2xl text-center font-bold text-white leading-tight sm:-mb-15 lg:mb-0"}>
                         Start your free trial today!
                     </h1>
                     <CTAButton play={true} text={"Start a free trial"}/>
