@@ -5,9 +5,8 @@ import FooterTitle from "@/components/Footer/footerTitle";
 const Footer = () => {
     return (
         <article className={"bg-black mt-20 py-10"}>
-            <section className={"flex justify-around"}>
+            <section className={"sm:flex justify-around grid grid-cols-2 gap-5 px-5 sm:grid-cols-none"}>
                 <ul>
-
                     <FooterTitle text={"Home"} />
                     <FooterLink text={"Categories"}/>
                     <FooterLink text={"Devices"}/>

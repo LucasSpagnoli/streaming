@@ -24,9 +24,9 @@ export default function RootLayout({
         <body
             className={`${manrope.variable} antialiased min-h-screen flex flex-col`}
         >
-        {/*<Header />*/}
+        <Header />
         <main className={"grow"}>{children}</main>
-        {/*<Footer />*/}
+        <Footer />
         </body>
         </html>
     );

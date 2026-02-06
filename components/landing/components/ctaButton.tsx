@@ -1,5 +1,5 @@
 import {Play} from "lucide-react";
-import Link from "next/dist/client/link";
+import Link from "next/link";
 
 type CTAButtonProps = {
     play: boolean;
