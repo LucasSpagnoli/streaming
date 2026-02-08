@@ -1,33 +1,55 @@
+'use client'
+
 import Image from "next/image";
 import {ChevronLeft, ChevronRight} from "lucide-react";
-import getHeroMovie from "@/lib/tmdb";
+import {useState} from "react";
 
-const Hero = async () => {
-    const movie1 = await getHeroMovie({id: 72844})
-    const movie2 = await getHeroMovie({id: 119051})
-    const movie3 = await getHeroMovie({id: 66732})
+type MovieProps = {
+    name: string,
+    description: string,
+    image: string
+}
+
+type MoviesProps = {
+    [
+        movies: MovieProps[]
+        ]
+}
+
+const HeroClient = ({movies}: MoviesProps) => {
+
+    const [index, setIndex] = useState(0);
+
+    const prev = () => {
+        const i = index === 0 ? 2 : index - 1;
+        setIndex(i)
+    }
+    const next = () => {
+        const i = index === 2 ? 0 : index + 1;
+        setIndex(i)
+    }
 
     return (
-        // TODO: Precisa fazer todo o design com a api do TMDB
         <section className="relative w-full min-h-screen flex items-center overflow-hidden">
+            {/* Background da esquerda e da direita */}
             <div className="absolute inset-0 flex -z-10">
                 <div className="w-3/5 h-full bg-hill"/>
                 <div className="w-2/5 h-full bg-dark"/>
             </div>
 
-            {/*// TODO: Mudar cores*/}
+            {/* Pontos guia para navegação carrossel, logo abaixo do header, no meio da tela */}
             <div className="absolute top-20 left-[50%] -translate-x-1/2 flex gap-2 z-30">
                 <span className="w-2.5 h-2.5 rounded-full bg-dark"/>
                 <span className="w-2 h-2 rounded-full bg-dark mt-px"/>
                 <span className="w-2 h-2 rounded-full bg-dark mt-px"/>
             </div>
 
-
             <div className="absolute top-23 right-20 flex gap-4 z-30">
-                <button className="bg-dark text-white hover:text-gray-600 hover:scale-90 transition">
+                <button className="bg-dark text-white hover:text-gray-600 hover:scale-90 transition" onClick={prev}>
                     <ChevronLeft size={20}/>
                 </button>
-                <button className="bg-dark text-white transition hover:text-gray-600 hover:scale-90 shadow-lg">
+                <button className="bg-dark text-white transition hover:text-gray-600 hover:scale-90 shadow-lg"
+                        onClick={next}>
                     <ChevronRight size={20}/>
                 </button>
             </div>
@@ -51,7 +73,7 @@ const Hero = async () => {
                     <div
                         className="relative shrink-0 w-[50%] -ml-100 opacity-60 grayscale hover:grayscale-0 transition-all">
                         <Image
-                            src={`https://image.tmdb.org/t/p/original${movie2.image[0].file_path}`}
+                            src={`https://image.tmdb.org/t/p/original${movies[index === 0 ? 2 : index - 1].image}`}
                             alt="Previous movie logo"
                             width={1220}
                             height={610}
@@ -61,7 +83,7 @@ const Hero = async () => {
 
                     <div className="relative shrink-0 w-[60%] mx-10 mt-30 shadow-2xl">
                         <Image
-                            src={`https://image.tmdb.org/t/p/original${movie1.image[2].file_path}`}
+                            src={`https://image.tmdb.org/t/p/original${movies[index].image}`}
                             alt="Main movie logo"
                             className="object-cover rounded-sm"
                             priority
@@ -72,7 +94,7 @@ const Hero = async () => {
 
                     <div className="relative shrink-0 w-[50%] opacity-30">
                         <Image
-                            src={`https://image.tmdb.org/t/p/original${movie3.image[1].file_path}`}
+                            src={`https://image.tmdb.org/t/p/original${movies[index === 2 ? 0 : index + 1].image}`}
                             alt="Next movie logo"
                             width={1220}
                             height={610}
@@ -86,4 +108,4 @@ const Hero = async () => {
     );
 };
 
-export default Hero;
+export default HeroClient;

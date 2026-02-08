@@ -1,10 +1,10 @@
-import Hero from "@/components/landing/hero";
+import Hero from "@/components/landing/Hero/hero";
 import Features from "@/components/landing/features";
 
 export default function Home() {
     return (
         <main>
-            {/*<Hero/>*/}
+            <Hero/>
             <Features/>
         </main>
     );
