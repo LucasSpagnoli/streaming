@@ -8,7 +8,7 @@ type navLinkProps = {
 function NavLink({link, text}: navLinkProps) {
     return (
         <li>
-            <Link className={`block list-none text-white text-sm px-4 py-1.5 sm:link-hover`} href={link}>{text}</Link>
+            <Link className={`block list-none text-white text-sm px-4 py-1.5 link-hover`} href={link}>{text}</Link>
         </li>
     )
 }

@@ -18,12 +18,12 @@ async function getHeroMovie({id}: getHeroMovieProps) {
     const data = await res.json()
 
     const movie = {
-        name: data.name,
+        name: data.title,
         description: data.overview,
         image: data.backdrop_path,
     }
 
-    console.log(movie)
+    // console.log(movie)
     return movie
 }
 
