@@ -20,6 +20,10 @@ body {
     background-color: var(--black);
 }
 
+.logo {
+    font-family: "Bricolage Grotesque", sans-serif;
+}
+
 .bg-0 {
     background-color: var(--bg0);
 }
@@ -52,13 +56,13 @@ body {
 }
 
 .bg-dark {
-    @media (width >= 40rem) {
+    @media (width >=40rem) {
         background-color: var(--black);
     }
 }
 
 .border-darkGray {
-    @media (width >= 40rem) {
+    @media (width >=40rem) {
         border: 2px solid var(--light-gray);
         border-radius: 4px;
     }
@@ -99,6 +103,7 @@ body {
         transform: scale(0.9);
         opacity: 0.9;
     }
+
     to {
         transform: scale(1);
         opacity: 1;

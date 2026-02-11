@@ -1,10 +1,6 @@
 import {JSX} from "react";
 import {CircleUser} from 'lucide-react'
-
-type OpinionCardProps = {
-    name: string;
-    text: string;
-};
+import { OpinionCardProps } from '../types/cards.type';
 
 const OpinionCard = ({name, text}: OpinionCardProps): JSX.Element => {
     return (

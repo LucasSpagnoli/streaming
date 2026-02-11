@@ -2,13 +2,10 @@
 
 import React, {useState} from 'react';
 import {motion, AnimatePresence} from 'framer-motion'
+import { QuestionCardProps } from '../types/cards.type';
 
-type questionCardProps = {
-    question: string;
-    answer: string;
-}
 
-const QuestionCard = ({question, answer}: questionCardProps) => {
+const QuestionCard = ({question, answer}: QuestionCardProps) => {
     const [isOpen, setIsOpen] = useState(false);
 
     return (

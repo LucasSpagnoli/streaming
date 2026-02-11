@@ -1,12 +1,13 @@
-import OpinionCard from "@/components/landing/components/opinionCard";
-import FaqFeature from "@/components/landing/components/faq/faqFeature";
-import PlanCard from "@/components/landing/components/planCard";
-import CTAButton from "@/components/landing/components/ctaButton";
+import OpinionCard from "@/features/landing/components/opinionCard";
+import FaqFeature from "@/features/landing/components/Faq";
+import PlanCard from "@/features/landing/components/planCard";
+import CTAButton from "@/features/landing/components/ctaButton";
 
 const Features = () => {
-    // TODO: Fazer versão pra celular (responsividade)
     return (
+
         <section className={"w-full overflow-hidden"}>
+
             {/*CTA*/}
             <article className="flex flex-col items-center justify-center w-full px-6 text-center">
                 <h2 className="lg:text-4xl text-2xl mt-15 mb-5 font-bold text-white leading-tight max-w-md">
@@ -86,6 +87,7 @@ const Features = () => {
 
             </article>
         </section>
+        
 )
 }
 

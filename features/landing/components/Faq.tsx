@@ -1,10 +1,11 @@
 'use client'
-import QuestionCard from "@/components/landing/components/faq/questionCard";
-import {faqArray} from './faqs'
+import QuestionCard from "@/features/landing/components/questionCard";
+import {faqArray} from '../utils/faqs'
+import { splitFaqs } from '../utils/faqFeatures'
 
-const FaqFeature = () => {
-    const left = faqArray.filter((_, i) => i % 2 === 0)
-    const right = faqArray.filter((_, i) => i % 2 !== 0)
+const Faq = () => {
+    const { left, right } = splitFaqs(faqArray);
+
     return (
         <article className={"w-full"}>
             <h2 className={"sm:text-2xl text-xl sm:m-15 font-bold m-5 text-white leading-tight"}>Frequently Asked Questions</h2>
@@ -32,4 +33,4 @@ const FaqFeature = () => {
     )
 }
 
-export default FaqFeature;
+export default Faq;

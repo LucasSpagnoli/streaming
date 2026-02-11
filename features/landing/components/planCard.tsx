@@ -1,14 +1,9 @@
 import {JSX} from "react";
-import CTAButton from "@/components/landing/components/ctaButton";
+import CTAButton from "@/features/landing/components/ctaButton";
+import { PlanCardProps } from '../types/cards.type';
 
-type OpinionCardProps = {
-    plan: string;
-    text: string;
-    price: number;
-    monthly: boolean;
-};
 
-const PlanCard = ({plan, text, price, monthly}: OpinionCardProps): JSX.Element => {
+const PlanCard = ({plan, text, price, monthly}: PlanCardProps): JSX.Element => {
     return (
         <div className={"lg:w-70 w-50 h-68 border-lightGray bg-customGray py-3 px-5 flex flex-col"}>
             <h3 className={"text-[1rem] mt-3 font-bold text-white leading-tight flex items-center"}>{plan}</h3>
