@@ -1,5 +1,5 @@
 'use client'
-import QuestionCard from "@/features/landing/components/questionCard";
+import QuestionCard from "./questionCard";
 import {faqArray} from '../utils/faqs'
 import { splitFaqs } from '../utils/faqFeatures'
 

@@ -1,5 +1,5 @@
 import {it, describe, expect, vi} from 'vitest'
-import getHeroMovie from "./tmdb";
+import getMovie from "./tmdb";
 
 describe('mdb', () => {
     it("It should return the movie Elite Squad", async () => {
@@ -11,7 +11,7 @@ describe('mdb', () => {
                 })
             } as any)
 
-        const movie = await getHeroMovie({id: 7347})
-        expect(movie.name).toBe("Elite Squad")
+        const movie = await getMovie(7347)
+        expect(movie.data.name).toBe("Elite Squad")
     })
 })

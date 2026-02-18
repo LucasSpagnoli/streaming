@@ -1,6 +1,6 @@
 import {JSX} from "react";
-import CTAButton from "@/features/landing/components/ctaButton";
 import { PlanCardProps } from '../types/cards.type';
+import { CTAButton } from "@/components";
 
 
 const PlanCard = ({plan, text, price, monthly}: PlanCardProps): JSX.Element => {
@@ -12,7 +12,7 @@ const PlanCard = ({plan, text, price, monthly}: PlanCardProps): JSX.Element => {
                 <h1 className={"text-[2rem] font-bold text-white leading-tight flex items-center"}>${price}</h1>
                 <p className={"text-gray-400 text-[0.7rem] self-end"}>{monthly ? "/month" : "/year"}</p>
             </div>
-            <CTAButton play={false} text={"Choose plan"}/>
+            <CTAButton play={false} text={"Choose plan"} url="/subscription"/>
         </div>
     )
 }

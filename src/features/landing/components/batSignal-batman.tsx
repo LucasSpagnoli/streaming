@@ -12,7 +12,7 @@ const BatSignalBatman = () => {
             transition={{
                 opacity: { duration: 15, repeat: Infinity, ease: "linear" },
             }}
-            className="absolute top-17 left-16 z-8 pointer-events-none flex items-center justify-center -z-20"
+            className="absolute top-17 left-16 pointer-events-none flex items-center justify-center z-8"
         >
             <div className="w-50 h-48 bg-white/20 rounded-full blur-[60px] absolute" />
             <div className="w-34 h-32 bg-white/30 rounded-full blur-[40px] absolute" />

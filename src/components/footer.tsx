@@ -1,6 +1,5 @@
-import FooterLink from "@/components/footerLink";
+import { FooterLink, FooterTitle} from "@/components";
 import {Facebook, Linkedin, Twitter} from "lucide-react";
-import FooterTitle from "@/components/footerTitle";
 
 const Footer = () => {
     return (

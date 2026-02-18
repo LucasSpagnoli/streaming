@@ -1,5 +1,4 @@
-import Features from "@/features/landing/components/Features";
-import Hero from "@/features/landing/components/Hero";
+import { Features, Hero } from "@/features/landing/components";
 
 export default function Home() {
     return (

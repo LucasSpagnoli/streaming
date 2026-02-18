@@ -8,27 +8,20 @@ const options = {
     }
 };
 
-type getHeroMovieProps = {
-    id: number;
-}
 
-async function getHeroMovie({id}: getHeroMovieProps) {
+
+async function getMovie(id: number) {
     const url = `https://api.themoviedb.org/3/movie/${id}?language=en-US`;
     const res = await fetch(url, options)
     const data = await res.json()
 
-    const movie = {
-        name: data.title,
-        description: data.overview,
-        image: data.backdrop_path,
-    }
 
-    // console.log(movie)
-    return movie
+    // console.log(data)
+    return data
 }
 
 // (async () => {
-//     await getHeroMovie({ id: 72844 });
+//     await getMovie({ id: 72844 });
 // })();
 
-export default getHeroMovie;
+export default getMovie;

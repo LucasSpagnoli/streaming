@@ -8,4 +8,8 @@ type MoviesProps = {
     movies: MovieProps[]
 }
 
-export type { MovieProps, MoviesProps };
+type getMovieProps = {
+    id: number;
+}
+
+export type { MovieProps, MoviesProps, getMovieProps };

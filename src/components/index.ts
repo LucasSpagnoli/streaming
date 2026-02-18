@@ -1,0 +1,6 @@
+export { default as Footer } from './footer'
+export { default as CTAButton } from './ctaButton'
+export { default as Header } from './header'
+export { default as FooterLink } from './footerLink'
+export { default as FooterTitle } from './footerTitle'
+export { default as NavLink } from './navLink'

@@ -1,7 +1,6 @@
-import OpinionCard from "@/features/landing/components/opinionCard";
-import FaqFeature from "@/features/landing/components/Faq";
-import PlanCard from "@/features/landing/components/planCard";
-import CTAButton from "@/features/landing/components/ctaButton";
+import { CTAButton } from "@/components";
+import { OpinionCard, Faq, PlanCard } from "@/features/landing/components";
+
 
 const Features = () => {
     return (
@@ -21,7 +20,7 @@ const Features = () => {
                     you can easily find the content you want to watch.
                 </p>
 
-                <CTAButton play={true} text={"Start Watching Now"}/>
+                <CTAButton play={true} text={"Start Watching Now"} url={"/movies"}/>
             </article>
 
             {/*Opinions*/}
@@ -36,7 +35,7 @@ const Features = () => {
             </article>
 
             {/*FAQ*/}
-            <FaqFeature/>
+            <Faq/>
 
             {/*Buy plans*/}
             <article className={"flex flex-col"}>
@@ -82,7 +81,7 @@ const Features = () => {
                     <h1 className={"sm:text-4xl text-2xl text-center font-bold text-white leading-tight sm:-mb-15 lg:mb-0"}>
                         Start your free trial today!
                     </h1>
-                    <CTAButton play={true} text={"Start a free trial"}/>
+                    <CTAButton play={true} text={"Start a free trial"} url="/subscription"/>
                 </div>
 
             </article>

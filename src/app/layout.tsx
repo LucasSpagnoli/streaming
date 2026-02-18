@@ -1,5 +1,5 @@
-import type {Metadata} from "next";
-import {Manrope} from "next/font/google";
+import type { Metadata } from "next";
+import { Manrope } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
@@ -15,17 +15,17 @@ export const metadata: Metadata = {
 };
 
 export default function RootLayout({
-                                       children,
-                                   }: Readonly<{
+    children,
+}: Readonly<{
     children: React.ReactNode;
 }>) {
     return (
         <html lang="en">
-        <body className={`${manrope.variable} antialiased min-h-screen flex flex-col`} suppressHydrationWarning>
-        <Header/>
-        <main className={"grow"}>{children}</main>
-        <Footer/>
-        </body>
+            <body className={`${manrope.variable} antialiased min-h-screen flex flex-col`} suppressHydrationWarning>
+                <Header />
+                <main className={"grow"}>{children}</main>
+                <Footer />
+            </body>
         </html>
     );
 }
